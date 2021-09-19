@@ -4,13 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxDatatableModule, orderByComparator } from '@swimlane/ngx-datatable';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileSaverModule } from 'ngx-filesaver';
+import { OrderPageComponent } from './order-page/order-page.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrderPageComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
@@ -20,8 +25,8 @@ import { FileSaverModule } from 'ngx-filesaver';
     BrowserModule /* or CommonModule */, 
       FormsModule,
    ReactiveFormsModule,
-   FileSaverModule
-  ],
+   FileSaverModule,
+   RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
