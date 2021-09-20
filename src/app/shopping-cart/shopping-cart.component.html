@@ -27,11 +27,14 @@
                   </div>
                 </div>
                 <div class="modal-footer">
+                  <a (click)="toShoppingCart()" class="btn btn-info btn-raised" placement="top">
+                    Order Page
+                  </a>
                   <a (click)="searchOrders()" class="btn btn-primary btn-raised" placement="top">
-                    {{ "Search" }}
+                   Search
                   </a>
                   <a (click)="resetOrders()" class="btn btn-secondary btn-raised" placement="top">
-                    {{ "Reset" }}
+                   Reset
                   </a>
                   <a (click)="exportAsXLSX()" class="btn btn-warning btn-raised" placement="top">
                     <span class=""><i class="ft-plus-square"></i></span>{{ "Extract XLS" }}

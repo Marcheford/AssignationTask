@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/MyOrders', pathMatch: 'full' },
 
   {
-  path: 'NewOrder',
+  path: 'ShoppingCart',
   component: OrderPageComponent
 },
 {

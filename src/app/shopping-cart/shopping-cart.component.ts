@@ -15,7 +15,7 @@ import {
 } from '@angular/forms';
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
-
+import { ActivatedRoute, Router } from "@angular/router";
 export interface IPageInfo {
   page: number;
   pageSize: number;
@@ -192,9 +192,10 @@ export class ShoppingCartComponent implements OnInit {
   priceTo: any;
 
   constructor(
+    private router: Router,
+    private route: ActivatedRoute,
 
     private modalService: NgbModal,
-    private fb: FormBuilder,
   ) {}
 
 
@@ -309,6 +310,11 @@ export class ShoppingCartComponent implements OnInit {
 
     this.pager.page = 1;
     this.orderem = this.orders;
+
+  }
+  toShoppingCart(){
+    this.router.navigate([`/ShoppingCart`], {relativeTo: this.route});
+
 
   }
 
